@@ -17,8 +17,6 @@ public class InitServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession(true);
         Field field = new Field();
-
-        Map<Integer, Sign> signs = field.getField();
         List<Sign> signList = field.getFieldData();
 
         session.setAttribute("field", field);
